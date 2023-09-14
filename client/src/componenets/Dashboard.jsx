@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import ModalForm from './ModalForm';
 import AddCaseForm from './AddCaseForm';
+import JoinCaseForm from './JoinCaseForm'
 
 function Dashboard() {
 
     const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen2, setModalOpen2] = useState(false);
 
     return (
         <div className=' flex flex-col gap-4 '>
@@ -52,9 +54,9 @@ function Dashboard() {
                     <h1 className=' text-text-secondary'>Join existing cases and get case details like case history, case transfer, next hearing</h1>
                 </section>
 
-                <button onClick={() => setModalOpen(true)} className='flex gap-4  py-2 px-4 w-28 font-semibold  rounded-xl  items-center justify-center text-white font-semibol bg-accent'>Join Case</button>
-                <ModalForm modalOpen={modalOpen} setModalOpen={setModalOpen} title="Add case" >
-                    <AddCaseForm setModalOpen={setModalOpen} />
+                <button onClick={() => setModalOpen2(true)} className='flex gap-4  py-2 px-4 w-28 font-semibold  rounded-xl  items-center justify-center text-white font-semibol bg-accent'>Join Case</button>
+                <ModalForm modalOpen={modalOpen2} setModalOpen={setModalOpen2} title="Join case" >
+                    <JoinCaseForm setModalOpen={setModalOpen2} />
                 </ModalForm>
             </section>
 

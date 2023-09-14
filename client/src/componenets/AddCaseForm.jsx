@@ -79,10 +79,7 @@ function AddCaseForm({ setModalOpen }) {
                 <label htmlFor="defendant" className="block mb-2   font-semibold">
                     Transcript
                 </label>
-                {/* <div className=' bg-accent bg-opacity-20 rounded-xl px-2 py-1 text-xs text-green-800'
-                    onClick={fileRef.current.click()}
-                > Choose file
-                </div> */}
+
                 <input
                     type="file"
                     accept=".pdf"
