@@ -5,11 +5,12 @@ import Dashboard from './componenets/dashboard';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import { useUser } from './utils/usercontext';
+import Cases from './componenets/Cases';
 
 
 function App() {
   const { user, setUser } = useUser();
-  // setUser(false);
+  setUser(true);
 
   return (
     <BrowserRouter>
@@ -22,8 +23,8 @@ function App() {
           <Route path='/' element={<Home />} >
             <Route index element={<Navigate to='/dashboard' />} />
             <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/cases' element={<Cases />} />
             <Route path='/clients' element={<div>clients</div>} />
-            <Route path='/cases' element={<div>cases</div>} />
             <Route path='/tasks' element={<div>tasks</div>} />
             <Route path='/appointments' element={<div>appointments</div>} />
             <Route path='*' element={<Navigate to='/' />} />
