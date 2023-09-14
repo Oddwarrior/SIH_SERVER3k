@@ -30,6 +30,14 @@ function Sidebar() {
                     <h1>Dashboard</h1>
                 </NavLink>
 
+                <Link to='/cases'
+                    className={` flex gap-4  py-3 px-6  rounded-xl w-full items-center justify-start duration-500 ${path === 'cases' ? 'bg-accent text-white ' : ' hover:text-accent '}`}
+                    onClick={() => setPath('cases')}
+                >
+                    <HiOutlineDocumentText />
+                    <h1>Cases</h1>
+                </Link>
+
                 <Link
                     to='/clients'
                     className={` flex gap-4  py-3 px-6  rounded-xl w-full items-center justify-start duration-500 ${path === 'clients' ? 'bg-accent text-white ' : ' hover:text-accent '}`}
@@ -39,13 +47,6 @@ function Sidebar() {
                     <h1>Client</h1>
                 </Link>
 
-                <Link to='/cases'
-                    className={` flex gap-4  py-3 px-6  rounded-xl w-full items-center justify-start duration-500 ${path === 'cases' ? 'bg-accent text-white ' : ' hover:text-accent '}`}
-                    onClick={() => setPath('cases')}
-                >
-                    <HiOutlineDocumentText />
-                    <h1>Cases</h1>
-                </Link>
 
                 <Link to='/tasks'
                     className={` flex gap-4  py-3 px-6  rounded-xl w-full items-center justify-start duration-500 ${path === 'tasks' ? 'bg-accent text-white ' : ' hover:text-accent '}`}
